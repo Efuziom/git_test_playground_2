@@ -17,7 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   second-job:
     name: Second job
-    needs: Lint code base
+    needs: super-lint
     runs-on: self-hosted
     steps:
       - name: Executing python code 
