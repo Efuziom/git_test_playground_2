@@ -70,8 +70,8 @@ fin = open("data.txt", "rt")
 fout = open("index.php", "wt")
 # for each line in the input file
 for line in fin:
-    foo = line.replace('question1', words[firstquestion]).replace('question2', words[secondquestion])
-    fout.write(foo.replace('question3', words[thirdquestion]))
+    foo = line.replace("question1", words[firstquestion]).replace("question2", words[secondquestion])
+    fout.write(foo.replace("question3", words[thirdquestion]))
 # close input and output files
 fin.close()
 fout.close()
