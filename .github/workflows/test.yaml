@@ -5,7 +5,7 @@ on: push
 jobs:
   super-lint:
     name: Lint code base
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,6 +15,11 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  second-job:
+    name: Second job
+    needs: Lint code base
+    runs-on: self-hosted
+    steps:
       - name: Executing python code 
         uses: actions/setup-python@v2
         with:
